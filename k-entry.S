@@ -15,27 +15,27 @@ ENTRY(Loader)
   iret                  // return from interrupt
 
 ENTRY(TimerEntry)
-	pushl $TIMER_INTR
-	jmp PreKernel
+  pushl $TIMER_INTR
+  jmp PreKernel
 
 ENTRY(GetPidEntry)
-	pushl $GETPID_CALL
-	jmp PreKernel
+  pushl $GETPID_CALL
+  jmp PreKernel
 
 ENTRY(SleepEntry)
-	pushl $SLEEP_CALL
-	jmp PreKernel
+  pushl $SLEEP_CALL
+  jmp PreKernel
 
 ENTRY(ShowCharEntry)
-	pushl $SHOWCHAR_CALL
-	jmp PreKernel
+  pushl $SHOWCHAR_CALL
+  jmp PreKernel
 
 ENTRY(MuxCreateEntry)
   pushl $MUX_CREATE_CALL
-	jmp PreKernel
+  jmp PreKernel
 
 ENTRY(MuxOpEntry)
-	pushl $MUX_OP_CALL
+  pushl $MUX_OP_CALL
   jmp PreKernel
 
 ENTRY(Term0Entry)
